@@ -1,0 +1,64 @@
+$PAGE_TOP: #ff4b1f;
+$PAGE_BOTTOM: #ff9068;
+$PAGE_TRANSPARENCY: rgba(255,255,255,0.4);
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+.myAccountPage {
+	background: -webkit-linear-gradient(left top, $PAGE_TOP, $PAGE_BOTTOM);
+	background: -o-linear-gradient(bottom right, $PAGE_TOP, $PAGE_BOTTOM);
+	background: -mox-linear-gradient(bottom right, $PAGE_TOP, $PAGE_BOTTOM);
+	background: linear-gradient(to bottom right, $PAGE_TOP, $PAGE_BOTTOM);
+}
+
+.account-item {
+	background: none;
+	color: white;
+	font-weight: 300;
+	border: 0px;
+	.item-content {
+		background: none;
+		&.activated {
+			background: $PAGE_TRANSPARENCY;
+		}
+		
+	}
+}
+.profile-image {
+	img {
+		border-radius: 50%;
+		margin: 10px;
+		border: 4px solid $PAGE_TRANSPARENCY;
+	}
+	
+}
+.small {
+	width: 50%;
+	display: block;
+	float: left;
+}
+
+.transBackground {
+	-khtml-opacity: .20;
+	-moz-opacity: .20;
+	-ms-filter: ”alpha(opacity=20)”;
+	filter: alpha(opacity=20);
+	filter: progid: DXImageTransform.Microsoft.Alpha(opacity=0.2);
+	opacity: .20;
+}
+
+ion-spinner svg {
+	width: 48px !important;
+	height: 48px !important;
+	stroke: red !important;
+	fill: red !important;
+}
+
+//LEARNER VOICE PAGE
+
+.timedate_small {
+	font-size: 0.8em;
+}
+
+//.bar-stable {
+	background-color: red !important}
+;

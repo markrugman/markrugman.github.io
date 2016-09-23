@@ -1,0 +1,19 @@
+<ion-view title="Learner Voice" id="page3">
+    <ion-content padding="true" class="has-header">
+        <h3 id="learnerVoice-heading1" style="color:#000000;font-weight:300;">You Said, We Did...</h3>
+        <ion-list id="learnerVoice-list1">
+            <ion-toggle toggle-class="toggle-positive" id="learnerVoice-toggle1" ng-model="showFilters.checked">Show Filters</ion-toggle>
+            <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked">{{checkbox.name}}</ion-checkbox>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 11px;"></div>
+        <ion-list id="learnerVoice-list2">
+            <ion-item class="item-thumbnail-left" id="learnerVoice-list-item7" ng-repeat="item in feedback" ng-if="(checkboxes[item.type].checked===true)">
+                <img src="img/ZCMCEnpbRCqaFqvVYUnT_DerbySU.png">
+                <h2>{{item.title}}</h2>
+                <p style="white-space:normal;">
+                    <span class="timedate_small">{{item.date}}</span>
+                    <br>{{item.description}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
