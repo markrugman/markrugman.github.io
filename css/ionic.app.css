@@ -9757,3 +9757,11 @@ ion-spinner svg {
 
 .timedate_small {
   font-size: 0.8em; }
+  
+ @media screen and (min-aspect-ratio: 4/3){
+
+  #page1 {
+    max-width:60% !important;
+    margin: 0 auto;
+  }
+}
