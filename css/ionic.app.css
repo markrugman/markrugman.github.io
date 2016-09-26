@@ -9758,7 +9758,7 @@ ion-spinner svg {
 .timedate_small {
   font-size: 0.8em; }
 
-@media screen and (min-aspect-ratio: 3/4){
+@media screen and (min-aspect-ratio: 4/3){
   html {
     max-width:100%;
   }
