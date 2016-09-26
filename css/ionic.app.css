@@ -9758,7 +9758,7 @@ ion-spinner svg {
 .timedate_small {
   font-size: 0.8em; }
 
-body {
+ion-view {
   margin: 0 auto;
   max-width: 900px !important;
 }
