@@ -9763,7 +9763,7 @@ ion-spinner svg {
     max-width:100%;
   }
   ion-view {
-    max-width:60% !important;
+    max-width:100% !important;
     margin: 0 auto;
   }
 }
