@@ -9760,7 +9760,7 @@ ion-spinner svg {
 
 @media screen and (min-aspect-ratio: 4/3){
 
-  ion-view {
+  #page1 {
     max-width:60% !important;
     margin: 0 auto;
   }
