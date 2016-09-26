@@ -9758,7 +9758,9 @@ ion-spinner svg {
 .timedate_small {
   font-size: 0.8em; }
 
-ion-view {
-  margin: 0 auto;
-  max-width: 900px !important;
+@media all and (orientation:landscape){
+  ion-view {
+    max-width:60% !important;
+    margin: 0 auto;
+  }
 }
