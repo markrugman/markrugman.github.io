@@ -9760,7 +9760,7 @@ ion-spinner svg {
 
 @media all and (orientation:landscape){
   ion-view {
-    max-width:60% !important;
+    max-width:600px !important;
     margin: 0 auto;
   }
 }
