@@ -20,12 +20,12 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('tabs.learnerVoice', {
-    url: '/LearnerVoice',
+  .state('tabs.feedback', {
+    url: '/feedback',
     views: {
       'tab2': {
-        templateUrl: 'templates/learnerVoice.html',
-        controller: 'learnerVoiceCtrl'
+        templateUrl: 'templates/feedback.html',
+        controller: 'feedbackCtrl'
       }
     }
   })
@@ -58,6 +58,26 @@ angular.module('app.routes', [])
       'tab5': {
         templateUrl: 'templates/nUSExtraCard.html',
         controller: 'nUSExtraCardCtrl'
+      }
+    }
+  })
+
+  .state('tabs.learnerVoice', {
+    url: '/learnerVoice',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/learnerVoice.html',
+        controller: 'learnerVoiceCtrl'
+      }
+    }
+  })
+
+  .state('tabs.currentDiscussions', {
+    url: '/stage1',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/currentDiscussions.html',
+        controller: 'currentDiscussionsCtrl'
       }
     }
   })

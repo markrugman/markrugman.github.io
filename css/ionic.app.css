@@ -9715,6 +9715,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.addPadding {
+  padding: 10px 10px 0px 10px; }
+
 .myAccountPage {
   background: -webkit-linear-gradient(left top, #ff4b1f, #ff9068);
   background: -o-linear-gradient(bottom right, #ff4b1f, #ff9068);
@@ -9732,6 +9735,7 @@ a.button {
       background: rgba(255, 255, 255, 0.4); }
 
 .profile-image img {
+  max-width: 300px;
   border-radius: 50%;
   margin: 10px;
   border: 4px solid rgba(255, 255, 255, 0.4); }
@@ -9758,10 +9762,7 @@ ion-spinner svg {
 .timedate_small {
   font-size: 0.8em; }
 
-@media screen and (min-aspect-ratio: 4/3){
-
+@media screen and (min-aspect-ratio: 4 / 3) {
   #page1 {
-    max-width:60% !important;
-    margin: 0 auto;
-  }
-}
+    max-width: 60% !important;
+    margin: 0 auto; } }

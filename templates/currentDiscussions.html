@@ -1,0 +1,38 @@
+<ion-view title="Current Discussions" id="page9">
+    <ion-content padding="true" class="has-header">
+        <form id="currentDiscussions-form2" class="list">
+            <ion-toggle toggle-class="toggle-positive" id="currentDiscussions-toggle3" ng-model="showFilters.checked">Filters</ion-toggle>
+            <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked">{{checkbox.name}}
+                <span class="badge badge-positive">{{countItems(checkbox.name)}}</span>
+            </ion-checkbox>
+        </form>
+        <div class="list card" id="currentDiscussions-card21" ng-repeat="item in discussions" ng-if="toShow(item) === true">
+            <ion-item class="item-avatar" id="currentDiscussions-list-item20">
+                <h2>{{item.title}}
+                    <span ng-if="item.news!=0" class="badge badge-assertive">{{item.news}}</span>
+                </h2>
+                <p>{{item.subtitle}}</p>
+            </ion-item>
+            <div>
+                <div class="addPadding">
+                    <p>
+                        {{item.topic}}
+                        <br>
+                        <br>
+                        <ng-repeat ng-repeat="tag in item.tags">
+                            <ngswitch ng-switch="checkboxes[tag.name].checked">
+                                <span ng-switch-when="true" class="badge badge-positive">{{tag.name}}</span>
+                                <span ng-switch-default="" class="badge badge-light">{{tag.name}}</span>
+                            </ngswitch>&nbsp;
+                        </ng-repeat>
+                        <br>
+                        <br>
+
+                        <a href="#" class="subdued">{{item.lovedby}} Like</a>
+                        <a href="#" class="subdued">{{item.commentcount}} Comments</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

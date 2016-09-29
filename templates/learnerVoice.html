@@ -1,18 +1,19 @@
-<ion-view title="Learner Voice" id="page3">
+<ion-view title="Learner Voice" id="page8">
     <ion-content padding="true" class="has-header">
-        <h3 id="learnerVoice-heading1" style="color:#000000;font-weight:300;">You Said, We Did...</h3>
-        <ion-list id="learnerVoice-list1">
-            <ion-toggle toggle-class="toggle-positive" id="learnerVoice-toggle1" ng-model="showFilters.checked">Show Filters</ion-toggle>
-            <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked">{{checkbox.name}}</ion-checkbox>
-        </ion-list>
-        <div class="spacer" style="width: 300px; height: 11px;"></div>
-        <ion-list id="learnerVoice-list2">
-            <ion-item class="item-thumbnail-left" id="learnerVoice-list-item7" ng-repeat="item in feedback" ng-if="(checkboxes[item.type].checked===true)">
-                <img src="img/ZCMCEnpbRCqaFqvVYUnT_DerbySU.png">
-                <h2>{{item.title}}</h2>
-                <p style="white-space:normal;">
-                    <span class="timedate_small">{{item.date}}</span>
-                    <br>{{item.description}}</p>
+        <ion-list id="learnerVoice-list4">
+            <ion-item class="item-thumbnail-left item-icon-right" id="learnerVoice-list-item14" ui-sref="tabs.currentDiscussions">
+                <h2>Current Topics</h2>
+                <p style="white-space:normal;">These topics are currently in discussion.</p>
+                <i class="icon ion-android-arrow-forward icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" id="learnerVoice-list-item16">
+                <h2>Closed Topics</h2>
+                <p style="white-space:normal;">These discussions have been closed and up for actioning</p>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right" id="learnerVoice-list-item15" ui-sref="tabs.feedback">
+                <h2>Feedback</h2>
+                <p>You Said, We Did!</p>
+                <i class="icon ion-arrow-right-c icon-accessory"></i>
             </ion-item>
         </ion-list>
     </ion-content>

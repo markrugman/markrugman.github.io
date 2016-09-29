@@ -3,6 +3,10 @@ $PAGE_BOTTOM: #ff9068;
 $PAGE_TRANSPARENCY: rgba(255,255,255,0.4);
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "../www/lib/ionic/scss";
+.addPadding {
+	padding: 10px 10px 0px 10px;
+}
+
 .myAccountPage {
 	background: -webkit-linear-gradient(left top, $PAGE_TOP, $PAGE_BOTTOM);
 	background: -o-linear-gradient(bottom right, $PAGE_TOP, $PAGE_BOTTOM);
@@ -25,6 +29,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 .profile-image {
 	img {
+		max-width: 300px;
 		border-radius: 50%;
 		margin: 10px;
 		border: 4px solid $PAGE_TRANSPARENCY;
@@ -59,6 +64,14 @@ ion-spinner svg {
 	font-size: 0.8em;
 }
 
+//FOR EXTRA WIDE LANDSCAPE VIEWS
+@media screen and (min-aspect-ratio: 4/3) {
+	#page1 {
+		max-width: 60% !important;
+		margin: 0 auto;
+	}
+	
+}
 //.bar-stable {
 	background-color: red !important}
 ;
