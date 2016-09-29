@@ -149,6 +149,7 @@ function ($scope, $stateParams) {
     
     $scope.discussions = [{
         title:'Longer Lessons',
+        subtitle: 'Posted on 01/09/2016 @ 11:34 AM',
         topic:'Some people would like longer lessons - our evening course finishes at 4.30pm and most of us would like to stay until 5.00pm',
         lovedby: 126,
         commentcount: 2,
@@ -161,6 +162,7 @@ function ($scope, $stateParams) {
         }]
     },{
         title: '23',
+        subtitle: 'Posted on 02/09/2016 @ 04:32 PM',
         topic:'sdadad',
         lovedby: 13,
         news:10,
@@ -170,6 +172,7 @@ function ($scope, $stateParams) {
         }]
     },{
         title: 'Test 2',
+        subtitle: 'Posted on 22/09/2016 @ 01:15 PM',
         topic:'Test Item',
         lovedby: 3,
         news:1,
