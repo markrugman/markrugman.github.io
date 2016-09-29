@@ -9775,6 +9775,8 @@ ion-spinner svg {
   box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2);
 }
 
+.noTopMargin{margin-top:-10px;}
+
 @media screen and (min-aspect-ratio: 4 / 3) {
   #page1 {
     max-width: 60% !important;
