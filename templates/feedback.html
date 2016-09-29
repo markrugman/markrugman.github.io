@@ -2,13 +2,14 @@
   <button class="button icon-left ion-chevron-left button-positive" ui-sref="tabs.learnerVoice">Back</button>
   <div class="h1 title">You Said, We Did</div>
 </div>
-<ion-view title="Feedback" id="page3">
+<ion-view title="Feedback" id="page3" style="background-color:#E8E8E8">
     <ion-content padding="true" class="has-header">
-        <h3 id="feedback-heading1" style="color:#000000;font-weight:300;">You Said, We Did...</h3>
+        <form  class="addShadow">
         <ion-list id="feedback-list1">
-            <ion-toggle toggle-class="toggle-positive" id="feedback-toggle1" ng-model="showFilters.checked">Show Filters</ion-toggle>
+            <ion-checkbox ng-model="showFilters.checked">Show Filters</ion-checkbox>
             <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked">{{checkbox.name}}</ion-checkbox>
         </ion-list>
+        </form>
         <div class="spacer" style="width: 300px; height: 11px;"></div>
         <ion-list id="feedback-list2">
             <ion-item class="item-thumbnail-left" id="feedback-list-item7" ng-repeat="item in feedback" ng-if="(checkboxes[item.type].checked===true)">

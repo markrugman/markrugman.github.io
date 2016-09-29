@@ -9762,6 +9762,19 @@ ion-spinner svg {
 .timedate_small {
   font-size: 0.8em; }
 
+.addPadding{
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.addPaddingTop2{
+  padding-top:20px;
+}
+
+.addShadow{
+  box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2);
+}
+
 @media screen and (min-aspect-ratio: 4 / 3) {
   #page1 {
     max-width: 60% !important;
