@@ -1,7 +1,7 @@
-<div class="bar bar-header">
-  <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="tabs.learnerVoice">Back</button>
+<div class="bar bar-header bar-positive">
+  <button class="button icon-left ion-chevron-left button-positive " ui-sref="tabs.learnerVoice">Back</button>
   <div class="h1 title">Current Topics</div>
-  <button class="button button-clear button-positive">Edit</button>
+  <button class="button button-light button-positive">Add New</button>
 </div>
 <ion-view title="Current Discussions" id="page9">
     <ion-content padding="true" class="has-header">
@@ -11,7 +11,6 @@
                 <span class="badge badge-positive">{{countItems(checkbox.name)}}</span>
             </ion-checkbox>
         </form>
-        <button id="currentDiscussions-button3" class="button button-positive  button-block icon-right ion-android-add-circle">Start New Topic</button>
         <div class="list card" id="currentDiscussions-card21" ng-repeat="item in discussions" ng-if="toShow(item) === true">
             <ion-item class="item-avatar" id="currentDiscussions-list-item20">
                 <img src="img/ZB6W7pSDGalXRSvBFVkg_slide2.png">
