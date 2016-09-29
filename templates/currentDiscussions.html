@@ -2,15 +2,17 @@
     <ion-content padding="true" class="has-header">
         <form id="currentDiscussions-form2" class="list">
             <ion-toggle toggle-class="toggle-positive" id="currentDiscussions-toggle3" ng-model="showFilters.checked">Filters</ion-toggle>
-            <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked">{{checkbox.name}}
+            <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked &amp;&amp; countItems(checkbox.name)!==0">{{checkbox.name}}
                 <span class="badge badge-positive">{{countItems(checkbox.name)}}</span>
             </ion-checkbox>
         </form>
+        <button id="currentDiscussions-button3" class="button button-positive  button-block icon-right ion-android-add-circle">Start New Topic</button>
         <div class="list card" id="currentDiscussions-card21" ng-repeat="item in discussions" ng-if="toShow(item) === true">
             <ion-item class="item-avatar" id="currentDiscussions-list-item20">
                 <img src="img/ZB6W7pSDGalXRSvBFVkg_slide2.png">
-                <h2>{{item.title}}
-                    <span ng-if="item.news!=0" class="badge badge-assertive">{{item.news}}</span>
+                <h2>
+                    <span ng-if="item.isNew===true" class="badge badge-positive">*NEW*</span>{{item.title}}
+                    <span ng-if="item.news!=0 &amp;&amp; !item.isNew" class="badge badge-assertive">{{item.news}}</span>
                 </h2>
                 <p></p>
                 <h5>{{item.subtitle}}</h5>
@@ -31,8 +33,14 @@
                         <br>
                         <br>
 
-                        <a href="#" class="subdued">{{item.lovedby}} Like</a>
-                        <a href="#" class="subdued">{{item.commentcount}} Comments</a>
+                        <a href="#" class="subdued">{{item.lovedby}}
+                            <ng-if ng-if="item.lovedby===1">Like</ng-if>
+                            <ng-if ng-if="item.lovedby!==1">Likes</ng-if>
+                        </a>
+                        <a href="#" class="subdued">{{item.commentcount}}
+                            <ng-if ng-if="item.commentcount===1">Comment</ng-if>
+                            <ng-if ng-if="item.commentcount!==1">Comments</ng-if>
+                        </a>
                     </p>
                 </div>
             </div>

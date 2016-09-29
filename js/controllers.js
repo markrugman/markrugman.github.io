@@ -90,7 +90,9 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
-
+    $scope.currentTopicsCount = 2;
+    $scope.closedTopicsCount = 0;
+    $scope.feedbackTopicsCount = 5;
 
 }])
    
@@ -137,6 +139,18 @@ function ($scope, $stateParams) {
             name:'Broomfield Hall',
             checked:true
         },
+        'Joseph Wright Center':{
+            name:'Joseph Wright Center',
+            checked: false
+        },
+        'Roundhouse':{
+            name:'Roundhouse',
+            checked: true
+        },
+        'Ilkeston':{
+            name:'Ilkeston',
+            checked: true
+        },
         'Lessons':{
             name:'Lessons',
             checked: false
@@ -150,9 +164,10 @@ function ($scope, $stateParams) {
     $scope.discussions = [{
         title:'Longer Lessons',
         subtitle: 'Posted on 01/09/2016 @ 11:34 AM',
+        isNew: true,
         topic:'Some people would like longer lessons - our evening course finishes at 4.30pm and most of us would like to stay until 5.00pm',
         lovedby: 126,
-        commentcount: 2,
+        commentcount: 1,
         news:0,
         tags: [{
             name:'Broomfield Hall'
@@ -163,22 +178,37 @@ function ($scope, $stateParams) {
     },{
         title: '23',
         subtitle: 'Posted on 02/09/2016 @ 04:32 PM',
+        isNew: false,
         topic:'sdadad',
-        lovedby: 13,
+        lovedby: 1,
         news:10,
         commentcount: 5,
         tags: [{
             name: 'College Wide'
+        },{
+            name: 'Joseph Wright Center'
         }]
     },{
         title: 'Test 2',
         subtitle: 'Posted on 22/09/2016 @ 01:15 PM',
+        isNew: false,
         topic:'Test Item',
         lovedby: 3,
         news:1,
         commentcount: 2,
         tags: [{
             name: 'Broomfield Hall'
+        }]
+    },{
+        title: 'Little Stevie @ JWC',
+        subtitle: 'Posted on 23/09/2016 @ 01:15 PM',
+        isNew: false,
+        topic:'Get rid of Little Stevie, he\'s not little anymore and he smells',
+        lovedby: 1278923,
+        news:13,
+        commentcount: 234,
+        tags: [{
+            name: 'Joseph Wright Center'
         }]
     }];
 

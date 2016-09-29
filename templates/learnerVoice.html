@@ -2,16 +2,25 @@
     <ion-content padding="true" class="has-header">
         <ion-list id="learnerVoice-list4">
             <ion-item class="item-thumbnail-left item-icon-right" id="learnerVoice-list-item14" ui-sref="tabs.currentDiscussions">
-                <h2>Current Topics</h2>
+                <img src="img/J13m001QyWjjBWiMYbtB_learner-voice-300x233.png">
+                <h2>Current Topics
+                    <span ng-if="currentTopicsCount!=0" class="badge badge-assertive">{{currentTopicsCount}}</span>
+                </h2>
                 <p style="white-space:normal;">These topics are currently in discussion.</p>
                 <i class="icon ion-android-arrow-forward icon-accessory"></i>
             </ion-item>
             <ion-item class="item-thumbnail-left" id="learnerVoice-list-item16">
-                <h2>Closed Topics</h2>
+                <img src="img/66PtfbMT367wihfAvRcY_log-in-register-upload-clipart-b1mooB-clipart.png">
+                <h2>Closed Topics
+                    <span ng-if="closedTopicsCount!=0" class="badge badge-assertive">{{closedTopicsCount}}</span>
+                </h2>
                 <p style="white-space:normal;">These discussions have been closed and up for actioning</p>
             </ion-item>
             <ion-item class="item-thumbnail-left item-icon-right" id="learnerVoice-list-item15" ui-sref="tabs.feedback">
-                <h2>Feedback</h2>
+                <img src="img/2soUEDYPSRGg1r9kWemC_feedback.jpg">
+                <h2>Feedback
+                    <span ng-if="feedbackTopicsCount!=0" class="badge badge-assertive">{{feedbackTopicsCount}}</span>
+                </h2>
                 <p>You Said, We Did!</p>
                 <i class="icon ion-arrow-right-c icon-accessory"></i>
             </ion-item>
