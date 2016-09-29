@@ -119,7 +119,7 @@ function ($scope, $stateParams) {
     $scope.toShow = function(item){
         //var ret = false;
         for(i=0;i<item.tags.length;i++){
-            console.log('Checking:'+item.title+' with tag:'+item.tags[i].name);
+            //console.log('Checking:'+item.title+' with tag:'+item.tags[i].name);
             if($scope.checkboxes[item.tags[i].name].checked===true){
                 //displayedItems ++;
                 return true;
