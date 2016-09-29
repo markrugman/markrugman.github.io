@@ -1,7 +1,7 @@
 <ion-view title="Current Discussions" id="page9">
     <ion-content padding="true" class="has-header">
         <form id="currentDiscussions-form2" class="list">
-            <ion-toggle toggle-class="toggle-positive" id="currentDiscussions-toggle3" ng-model="showFilters.checked">Filters</ion-toggle>
+            <ion-checkbox ng-model="showFilters.checked">Show Filters</ion-checkbox>
             <ion-checkbox ng-model="checkbox.checked" ng-repeat="checkbox in checkboxes" ng-if="showFilters.checked &amp;&amp; countItems(checkbox.name)!==0">{{checkbox.name}}
                 <span class="badge badge-positive">{{countItems(checkbox.name)}}</span>
             </ion-checkbox>

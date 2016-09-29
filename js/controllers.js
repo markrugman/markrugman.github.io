@@ -103,8 +103,13 @@ function ($scope, $stateParams) {
     $scope.discussions = [];
     //var displayedItems = 0;
     
-    
     $scope.showFilters = {};
+    $scope.showFilters.checked = false;
+    
+    $scope.toggleToggle = function(curState){
+        if(curState){$scope.showFilters.checked = false} else {$scope.showFilters.checked=true}
+    };
+    
     
     $scope.countItems = function(tagName){
         var counter = 0;
@@ -131,7 +136,6 @@ function ($scope, $stateParams) {
         return false;
     };
     
-    $scope.showFilters.checked = false;
     
     //SAVE CHECKBOXES TO LOCALSTORAGE FOR FUTURE
     $scope.checkboxes = { 
