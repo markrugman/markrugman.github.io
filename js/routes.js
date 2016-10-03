@@ -7,14 +7,14 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-  
+
+
 
       .state('tabs.derbyCollege', {
     url: '/DerbyCollege',
     views: {
       'tab1': {
-        templateUrl: 'templates/derbyCollege.html',
+        templateUrl: 'app/components/derbycollege/derbyCollege.html',
         controller: 'derbyCollegeCtrl'
       }
     }
@@ -24,7 +24,7 @@ angular.module('app.routes', [])
     url: '/feedback',
     views: {
       'tab2': {
-        templateUrl: 'templates/feedback.html',
+        templateUrl: 'app/components/learnervoice/feedback.html',
         controller: 'feedbackCtrl'
       }
     }
@@ -48,7 +48,7 @@ angular.module('app.routes', [])
 
   .state('splashscreen', {
     url: '/splashscreen',
-    templateUrl: 'templates/splashscreen.html',
+    templateUrl: 'app/components/splashscreen/splashscreen.html',
     controller: 'splashscreenCtrl'
   })
 
@@ -56,7 +56,7 @@ angular.module('app.routes', [])
     url: '/nusExtra',
     views: {
       'tab5': {
-        templateUrl: 'templates/nUSExtraCard.html',
+        templateUrl: 'app/components/nusextra/nUSExtraCard.html',
         controller: 'nUSExtraCardCtrl'
       }
     }
@@ -66,7 +66,7 @@ angular.module('app.routes', [])
     url: '/learnerVoice',
     views: {
       'tab2': {
-        templateUrl: 'templates/learnerVoice.html',
+        templateUrl: 'app/components/learnervoice/learnerVoice.html',
         controller: 'learnerVoiceCtrl'
       }
     }
@@ -76,7 +76,7 @@ angular.module('app.routes', [])
     url: '/stage1',
     views: {
       'tab2': {
-        templateUrl: 'templates/currentDiscussions.html',
+        templateUrl: 'app/components/learnervoice/currentDiscussions.html',
         controller: 'currentDiscussionsCtrl'
       }
     }
@@ -84,6 +84,6 @@ angular.module('app.routes', [])
 
 $urlRouterProvider.otherwise('/splashscreen')
 
-  
+
 
 });
