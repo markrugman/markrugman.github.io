@@ -16,7 +16,7 @@ angular.module('app.user.factory', [])
             if (user) { //check if user logged in
                 if(UserCollection !== user){ //check if already saved user object
                     UserCollection = user; //set user details
-                    alert('logged in');
+                    //alert('logged in');
                     //$state.go('tabsController.theStudentHub'); //go to first page for users
                 }
                 return;
@@ -48,7 +48,8 @@ angular.module('app.user.factory', [])
         });
     }
 
-    function getUser(){
+    function getUser(callback){
+        UserCollection = firebase.auth().currentUser;
         return UserCollection;
     }
 

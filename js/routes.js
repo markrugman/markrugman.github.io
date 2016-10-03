@@ -34,7 +34,7 @@ angular.module('app.routes', [])
     url: '/myAccount',
     views: {
       'tab3': {
-        templateUrl: 'templates/myAccount.html',
+        templateUrl: 'app/components/user/myAccount.html',
         controller: 'myAccountCtrl'
       }
     }
