@@ -1,0 +1,42 @@
+<ion-nav-bar class="bar bar-header bar-positive">
+  <ion-nav-buttons side="primary">
+      <button class="button" ui-sref="tabs.derbyCollege">
+        <i class="ion-arrow-left-c"></i> Home
+      </button>
+    </ion-nav-buttons>
+  <ion-nav-title>Login / Signup</ion-nav-title>
+</ion-nav-bar >
+
+<ion-view title="Login" hide-back-button="true">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="" ng-model="logindetails.email">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="" ng-model="logindetails.password">
+            </label>
+            <button ng-click="login()" class="button button-positive  button-block">Login</button>
+        </form>
+        <form class="list" name="signupform">
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="" ng-model="signupdetails.email" name="email" ng-class="{ 'has-error' : signupform.email.$invalid &amp;&amp; !signupform.email.$pristine &amp;&amp; !signupform.email.endswith(&quot;derby-college.ac.uk&quot;)}"
+                required="" ng-change="checkEmailaddress()">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="******" ng-model="signupdetails.password" ng-minlength="6" ng-class="{ 'has-error' : signupform.password.$invalid &amp;&amp; !signupform.password.$pristine }" name="password" required=""
+                ng-change="checkPasswords()">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Repeat</span>
+                <input type="password" placeholder="******" ng-model="signupdetails.repeatpassword" ng-minlength="6" required="" name="repeatpassword" ng-change="checkPasswords()">
+            </label>
+            <button ng-click="signup()" ng-disabled="signupform.$invalid || !signupdetails.passwordsMatch || !signupdetails.validEmail" class="button button-positive  button-block">Register Account</button>
+        </form>
+        <button ng-click="cancel()" class="button button-assertive  button-block">Cancel</button>
+    </ion-content>
+</ion-view>

@@ -52,6 +52,12 @@ angular.module('app.routes', [])
     controller: 'splashscreenCtrl'
   })
 
+  .state('login', {
+    url: '/login',
+    templateUrl: 'app/components/user/login.html',
+    controller: 'loginCtrl'
+  })
+
   .state('tabs.nUSExtraCard', {
     url: '/nusExtra',
     views: {

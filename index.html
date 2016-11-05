@@ -5,8 +5,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-
-
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
@@ -16,9 +14,7 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-
     <link href="css/ionic.app.css" rel="stylesheet">
-
 
     <style type="text/css">
       .platform-ios .manual-ios-statusbar-padding{
@@ -45,20 +41,18 @@
     <script src="js/controllers.js"></script>
     <script src="js/routes.js"></script>
 
-
     <script src="js/directives.js"></script>
-
 
     <script src="app/components/derbycollege/app.derbycollege.js"></script>
     <script src="app/components/learnervoice/app.learnervoice.js"></script>
     <script src="app/components/splashscreen/app.splashcreen.js"></script>
-    <script src="app/components/user/app.user.js"></script>
+    <script src="app/components/user/app.user.factory.js"></script>
+    <script src="app/components/user/app.user.controllers.js"></script>
     <script src="app/components/nusextra/app.nusextra.js"></script>
 
     <script src="js/services.js"></script>
 
     <script src="js/lv-services.js"></script>
-
 
     <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
@@ -70,11 +64,11 @@
 
   </head>
   <body ng-app="app" animation="slide-left-right-ios7">
+
   <div>
     <div>
-
         <ion-nav-view></ion-nav-view>
     </div>
-</div>
+  </div>
   </body>
 </html>

@@ -7,4 +7,8 @@ angular.module('app.derbycollege.ctrls', [])
         }
     });
 
+    $scope.onSwipeLeft = function(){
+      $scope.swiped = true;
+    }
+
 }])

@@ -1,14 +1,19 @@
 angular.module('app.learnervoice.ctrls', [])
 
-.controller('learnerVoiceCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('learnerVoiceCtrl', ['$scope', '$state', '$stateParams','newUserFactory', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-    $scope.currentTopicsCount = 2;
-    $scope.closedTopicsCount = 0;
-    $scope.feedbackTopicsCount = 5;
-
+function ($scope, $state, $stateParams, newUserFactory) {
+  $scope.$on('$ionicView.beforeEnter', function(){  //Check if LoggedIn else goto login page
+    if(!newUserFactory.isLoggedIn()){
+      $state.go('login');
+    } // Anything you can think of
+  });
+  $scope.currentTopicsCount = 2;
+  $scope.closedTopicsCount = 0;
+  $scope.feedbackTopicsCount = 5;
 }])
+
 
 .controller('currentDiscussionsCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
