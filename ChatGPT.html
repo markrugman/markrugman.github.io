@@ -1,0 +1,65 @@
+<html>
+<head>
+  <style>
+    .definition-alert {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <p>skateboard ladder camel</p>
+  <div class="definition-alert">
+    <p class="definition-text"></p>
+  </div>
+  <script>
+    // listen for the start of a selection
+    document.addEventListener('mousedown', () => {
+      // clear the previous selection when starting a new one
+      window.getSelection().removeAllRanges();
+
+      // hide the alert box
+      const alertBox = document.querySelector('.definition-alert');
+      alertBox.style.display = 'none';
+    });
+
+    // listen for the end of a selection
+    document.addEventListener('mouseup', () => {
+      // get the selected text
+      const selection = window.getSelection().toString();
+
+      // show the alert box if there's a selection
+      if (selection) {
+        const alertBox = document.querySelector('.definition-alert');
+        alertBox.style.display = 'block';
+
+        // fetch the definition from Wikipedia
+        fetch(`https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=${selection}`)
+          .then(response => response.json())
+          .then(data => {
+            // extract the definition from the response
+            const page = data.query.pages[Object.keys(data.query.pages)[0]];
+            const definition = page.extract;
+
+            // insert the definition into the alert box
+            const definitionAlert = document.querySelector('.definition-text');
+            definitionAlert.textContent = definition;
+
+            // position the alert box above the selection
+            const range = window.getSelection().getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            alertBox.style.top = `${rect.top - alertBox.offsetHeight - 5}px`;
+            alertBox.style.left = `${rect.left}px`;
+          });
+      }
+    });
+  </script>
+</body>
+</html>
